@@ -6,7 +6,7 @@ node('master')
 	}
     stage('Continuous Build') 
 	{
-    sh label: '', script: '/opt/maven/bin/mvn package'
+    sh label: '', script: '/opt/maven/bin/mvn clean install package'
 	}
     stage('Continuous Deployment') 
 	{

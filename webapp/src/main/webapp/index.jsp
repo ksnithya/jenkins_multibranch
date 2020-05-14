@@ -1,1 +1,1 @@
-Welcome to Tomcat
+Welcome

@@ -1,4 +1,4 @@
-node('offer') 
+node('master') 
 {
     stage('Continuous Download') 
 	{

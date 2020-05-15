@@ -18,6 +18,6 @@ node('master')
 	}
     stage('Continuous Delivery') 
 	{
-sh label: '', script: 'scp  /var/lib/jenkins/workspace/MultiBranchPipeline_loans/webapp/target/webapp.war jenkinadm@172.31.32.180:/opt/tomcat/webapps/productionenv.war'
+sh label: '', script: 'scp  /var/lib/jenkins/workspace/MultiBranchPipeline_loans/webapp/target/webapp.war jenkinadm@172.31.32.180:/opt/tomcat/webapps/loans.war'
 	}
 }

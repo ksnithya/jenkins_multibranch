@@ -2,7 +2,7 @@ node('master')
 {
     stage('Continuous Download') 
 	{
-    git 'https://github.com/ksnithya/jenkins_multibranch.git'
+    git branch: 'loans', url: 'https://github.com/ksnithya/jenkins_multibranch.git'
 	}
     stage('Continuous Build') 
 	{

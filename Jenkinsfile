@@ -2,7 +2,7 @@ node('master')
 {
     stage('Continuous Download') 
 	{
-    git branch: 'offer', 'https://github.com/ksnithya/jenkins_multibranch.git'
+    git branch: 'offer', url: 'https://github.com/ksnithya/jenkins_multibranch.git'
 	}
     stage('Continuous Build') 
 	{
@@ -18,6 +18,6 @@ node('master')
 	}
     stage('Continuous Delivery') 
 	{
-    sh label: '', script: 'scp  /var/lib/jenkins/workspace/MultiBranchPipeline_offer/webapp/target/webapp.war jenkinadm@172.31.32.180:/opt/tomcat/webapps/prodenv1.war'
+    sh label: '', script: 'scp  /var/lib/jenkins/workspace/MultiBranchPipeline_offer/webapp/target/webapp.war jenkinadm@172.31.32.180:/opt/tomcat/webapps/offer.war'
 	}
 }
